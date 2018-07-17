@@ -34,14 +34,18 @@ Before sending the request header, you need to set the request parameter, which 
 >}
 
 
-## Data In Database
+## Test For Data In Database
 
-Mysql statements:  
+Mysql statements 1:  
+>`select flightnumber,sharedflightnumber,airlinecode,airlinename,crafttypename,crafttypekinddisplayname,createdtime from  
+> flight where flightnumber="HU7669";`   
+![result 1](https://github.com/zhuang1108/MyFirstRepository/blob/master/images/QQ截图20180717185753.png)
+
+Mysql statements 2:  
 >`select flight.flightnumber,airportinfo.dcityname,airportinfo.acityname,characteristicsprice.lowestprice from  
 > flight,airportinfo,characteristicsprice where flight.flightnumber=airportinfo.flightnumber and  
-> flight.flightnumber=characteristicsprice.flightnumber and lowestprice<300;`  
-result:  
-![search result](C:\Users\庄少\Pictures\QQ截图20180717183143.png)
+> flight.flightnumber=characteristicsprice.flightnumber and lowestprice<300;`   
+![result 2](https://github.com/zhuang1108/MyFirstRepository/blob/master/images/QQ截图20180717183143.png)
 
 
 
