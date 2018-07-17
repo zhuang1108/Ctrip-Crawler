@@ -36,6 +36,8 @@ Before sending the request header, you need to set the request parameter, which 
 
 ## Test For Data In Database
 
+notes: the database did not store all the data when performing these data query tests against the databse.
+
 Mysql statements 1:  
 >`select flightnumber,sharedflightnumber,airlinecode,airlinename,crafttypename,crafttypekinddisplayname,createdtime from  
 > flight where flightnumber="HU7669";`   
