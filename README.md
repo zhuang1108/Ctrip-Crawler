@@ -11,7 +11,7 @@ The file *“ctripTables.txt”* is the specification of database table building
 
 ## URL Acquisition
 
-The URL for getting JSON data is found in ulrs like [http://flights.ctrip.com/itinerary/oneway/sha-can?ddate1=2018-08-20](http://flights.ctrip.com/itinerary/oneway/sha-can?ddate1=2018-08-20). This website showed after the visitors being registered by CTRIP Website in [http://flights.ctrip.com/booking/sha-can-day-1.html?ddate1=2018-08-20](http://flights.ctrip.com/booking/sha-can-day-1.html?ddate1=2018-08-20). The reason of Website changes may be due to the lack of restrictions on the access speed of the previous procedures to the website( `time.sleep(3)` ).
+The URL for getting JSON data is found in ulrs like [http://flights.ctrip.com/itinerary/oneway/sha-can?ddate1=2018-08-20](http://flights.ctrip.com/itinerary/oneway/sha-can?ddate1=2018-08-20). This website showed after the visitors being registered by CTRIP Website likes [http://flights.ctrip.com/booking/sha-can-day-1.html?ddate1=2018-08-20](http://flights.ctrip.com/booking/sha-can-day-1.html?ddate1=2018-08-20). The reason of Website changes may be due to the lack of restrictions on the access speed of the previous procedures to the website( `time.sleep(3)` ).
 
 The URL for the request for JSON data is [http://flights.ctrip.com/itinerary/api/12808/products](http://flights.ctrip.com/itinerary/api/12808/products). The data parameter is necessary and the **Content-Type** field in the request header needs to be specified as ***application/json***.
 
@@ -39,7 +39,10 @@ Before sending the request header, you need to set the request parameter, which 
 Mysql statements:  
 >`select flight.flightnumber,airportinfo.dcityname,airportinfo.acityname,characteristicsprice.lowestprice from  
 > flight,airportinfo,characteristicsprice where flight.flightnumber=airportinfo.flightnumber and  
-> flight.flightnumber=characteristicsprice.flightnumber and lowestprice<800;`
+> flight.flightnumber=characteristicsprice.flightnumber and lowestprice<300;`  
+result:  
+![search result](C:\Users\庄少\Pictures\QQ截图20180717183143.png)
+
 
 
 
