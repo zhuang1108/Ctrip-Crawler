@@ -6,7 +6,7 @@ The file *“ctrip.py”* is created to pick up the ticket information on Ctrip.
   * parse the JSON packets
   * store the data to the MySQL database
 
-The file *“ctripTables.txt”* is the specification of database table building. According to the information field, three tables can be set up and each with the flight number as the unique primary key. Although this way of building tables makes it more complex to write MySQL statements to add, delete or modify data in the database (to get all the information of a flight we need to operate on three tables at the same time), it can reduce the storage space of data occupied by this way.
+The file *“ctripTables.sql”* is the specification of database table building. According to the information field, three tables can be set up and each with the flight number as the unique primary key. Although this way of building tables makes it more complex to write MySQL statements to add, delete or modify data in the database (to get all the information of a flight we need to operate on three tables at the same time), it can reduce the storage space of data occupied by this way.
 
 
 ## URL Acquisition
